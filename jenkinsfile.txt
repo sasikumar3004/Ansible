@@ -1,0 +1,12 @@
+pipeline {
+	agent any
+
+stage('compile') 
+{
+    steps{
+	withmaven(maven	: 'maven-3.5.4')
+	sh 'mvn clean complie' 
+
+} 
+}
+}
