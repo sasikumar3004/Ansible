@@ -3,10 +3,11 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                script {
-                    echo "Output: ${output}"
+               {
+                    echo "Output"
                 }
             }
         }
     }
+}
 
