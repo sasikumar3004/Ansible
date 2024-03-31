@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'Newrepo', credentialsId: 'PROD', poll: false, url: 'https://github.com/sasikumar3004/Newrepo'
+                git branch: 'Newrepo', credentialsId: 'PROD', poll: false, url: 'https://github.com/sasikumar3004/Newrepo.git'
                 }
        }
         stage('Terraform Init') {
             steps {
-                sh 'terraform init -input'
+                sh 'terraform init'
             }
 }
 
