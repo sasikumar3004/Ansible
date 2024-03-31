@@ -1,10 +1,8 @@
-provider "aws" {}
+resource "aws_instance" "my_vm" {
+ ami           = var.ami
+ instance_type = var.instance_type
 
-resource "aws_instance" "app_server" {
-  ami           = "ami-0c101f26f147fa7fd"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "ExampleAppServerInstance"
-  }
+ tags = {
+   Name = var.name_tag,
+ }
 }
