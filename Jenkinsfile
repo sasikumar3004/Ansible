@@ -9,7 +9,7 @@ pipeline {
        }
         stage('Terraform Init') {
             steps {
-                sh 'terraform rerraform init -plugin-dir=C:\terraform\.terraform'
+                sh 'terraform init -input'
             }
 }
 
